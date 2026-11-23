@@ -1,0 +1,375 @@
+.page {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.heroBanner {
+  background: linear-gradient(to right, #D40000, #850000, #400000);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  color: #ffffff;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@media (min-width: 640px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroBanner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoBox {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 0.375rem;
+  box-shadow: var(--shadow-xl);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .logoBox {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+
+.authorityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #f59e0b;
+  color: #450a0a;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid #fcd34d;
+}
+
+.bannerTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .bannerTitle {
+    font-size: 1.875rem;
+  }
+}
+
+.bannerSub {
+  font-size: 0.75rem;
+  color: #fee2e2;
+  max-width: 36rem;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .kpiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.kpiCard {
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.kpiLabel {
+  display: block;
+  font-size: 10px;
+  color: #fecaca;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.kpiVal {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: #ffffff;
+}
+
+.tabsBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+:global(.dark) .tabsBar {
+  border-bottom-color: #262626;
+}
+
+.tabBtn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  color: #404040;
+  transition: all 0.15s ease;
+}
+
+.tabBtn:hover {
+  border-color: #f87171;
+}
+
+:global(.dark) .tabBtn {
+  background-color: #151620;
+  border-color: #262626;
+  color: #d4d4d4;
+}
+
+.tabBtnActive {
+  background-color: #D40000;
+  color: #ffffff;
+  border-color: #D40000;
+  box-shadow: var(--shadow-sm);
+}
+
+:global(.dark) .tabBtnActive {
+  background-color: #D40000;
+  color: #ffffff;
+  border-color: #D40000;
+}
+
+.cardBox {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: var(--shadow-xs);
+}
+
+:global(.dark) .cardBox {
+  background-color: #141520;
+  border-color: #2D1B22;
+}
+
+.welcomeRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .welcomeRow {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.twoColEvents {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .twoColEvents {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.galTile {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background-color: #171717;
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--shadow-sm);
+}
+
+:global(.dark) .galTile {
+  border-color: #262626;
+}
+
+.galImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galTile:hover .galImg {
+  transform: scale(1.05);
+}
+
+.tableWrap {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+:global(.dark) .tableWrap {
+  background-color: #141520;
+  border-color: #2D1B22;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  font-size: 0.75rem;
+  border-collapse: collapse;
+}
+
+.thead {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+  color: #737373;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+:global(.dark) .thead {
+  background-color: #1A1B28;
+  border-bottom-color: #262626;
+}
+
+.tbodyRow {
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.15s ease;
+}
+
+.tbodyRow:hover {
+  background-color: rgba(250, 250, 250, 0.5);
+}
+
+:global(.dark) .tbodyRow {
+  border-bottom-color: #262626;
+}
+
+:global(.dark) .tbodyRow:hover {
+  background-color: rgba(23, 23, 23, 0.5);
+}
+
+.thCell,
+.tdCell {
+  padding: 0.875rem;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  max-width: 32rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  position: relative;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:global(.dark) .modalCard {
+  background-color: #151620;
+  border-color: #382026;
+}
+
+.modalHeader {
+  background-color: #D40000;
+  color: #ffffff;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

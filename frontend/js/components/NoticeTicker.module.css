@@ -1,0 +1,149 @@
+.bar {
+  background-color: rgba(254, 242, 242, 0.8);
+  border-top: 1px solid rgba(254, 202, 202, 0.8);
+  border-bottom: 1px solid rgba(254, 202, 202, 0.8);
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+:global(.dark) .bar {
+  background-color: #1C060E;
+  border-color: #3E101E;
+}
+
+.inner {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+.badgeWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.officialBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  background-color: #D40000;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.scroller {
+  flex: 1 1 0%;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #262626;
+}
+
+:global(.dark) .scroller {
+  color: #e5e5e5;
+}
+
+.itemBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.itemBtn:hover {
+  color: #D40000;
+}
+
+:global(.dark) .itemBtn:hover {
+  color: #f87171;
+}
+
+.itemBtn:hover .itemTitle {
+  text-decoration: underline;
+}
+
+.itemTitle {
+  font-weight: 500;
+}
+
+.pinTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.375rem;
+  border-radius: 0.25rem;
+  background-color: #D40000;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.urgentTag {
+  padding: 0 0.375rem;
+  border-radius: 0.25rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.contestTag {
+  padding: 0 0.375rem;
+  border-radius: 0.25rem;
+  background-color: #d97706;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.separator {
+  color: #d4d4d4;
+  margin-left: 1rem;
+}
+
+:global(.dark) .separator {
+  color: #404040;
+}
+
+.updatedWrap {
+  flex-shrink: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .updatedWrap {
+    display: block;
+  }
+}
+
+.updatedText {
+  font-size: 11px;
+  color: #D40000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+:global(.dark) .updatedText {
+  color: #fca5a5;
+}

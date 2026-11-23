@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Registration | CUEC Portal</title>
+    <link rel="icon" type="image/jpeg" href="/city-university-logo.jpg" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="cuec-app-shell">
+    <main class="cuec-main-content" style="max-width: 520px; margin: 3rem auto; padding: 0 1.25rem;">
+      <section class="cuec-card" style="padding: 2rem;">
+        <h1 style="font-size: 1.5rem; font-weight: 800;">Student Wing Registration</h1>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--color-text-muted);">
+          Register your student profile for CUCC wing review and event enrollment.
+        </p>
+        <form action="/api/auth/register" method="POST" style="margin-top: 1.25rem; display: grid; gap: 1rem;">
+          <div>
+            <label for="reg-name" style="display: block; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.35rem;">Full Name</label>
+            <input id="reg-name" name="name" type="text" required class="cuec-input" placeholder="Student Full Name" />
+          </div>
+          <div>
+            <label for="reg-id" style="display: block; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.35rem;">Student ID</label>
+            <input id="reg-id" name="studentId" type="text" required class="cuec-input" placeholder="CU-23-CSE-001" />
+          </div>
+          <div>
+            <label for="reg-email" style="display: block; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.35rem;">Email Address</label>
+            <input id="reg-email" name="email" type="email" required class="cuec-input" placeholder="student@cityuniversity.edu" />
+          </div>
+          <button type="submit" class="cuec-btn cuec-btn-primary">Create Student Account</button>
+          <a href="/" class="cuec-btn cuec-btn-ghost" style="text-align: center;">Back to Live Portal</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "city-university-events-clubs",
+  "version": "1.0.0",
+  "description": "Central official portal for City University Events & Clubs (CUEC) - Computer Club, Campus Life, and specialized wings.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node backend/src/server.js",
+    "start": "node backend/src/server.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "seed": "node database/seeders/seed.js",
+    "migrate": "node database/migrations/001_initial_indexes.js",
+    "lint": "node --check backend/src/server.js && node --check backend/src/app.js && node --test tests/validation.test.js tests/api.test.js",
+    "test": "node --test tests/validation.test.js tests/api.test.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "mongoose": "^9.12.3",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {}
+}

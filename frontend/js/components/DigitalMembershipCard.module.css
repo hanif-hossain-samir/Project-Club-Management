@@ -1,0 +1,346 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  max-width: 28rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  position: relative;
+  animation: cuecZoomIn 0.2s ease-out;
+}
+
+:global(.dark) .modal {
+  background-color: #151620;
+  border-color: #382026;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 20;
+  padding: 0.375rem;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cardOuter {
+  padding: 1.5rem;
+}
+
+.idCard {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid #D40000;
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(to bottom, #D40000, #700000, #450000);
+  color: #ffffff;
+  padding: 1.5rem;
+}
+
+:global(.dark) .idCard {
+  border-color: #dc2626;
+}
+
+.watermark {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(252, 165, 165, 0.3);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.logoBox {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  padding: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 9999px;
+}
+
+.uniName {
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  font-family: var(--font-heading);
+}
+
+.cardSub {
+  font-size: 10px;
+  color: #fde68a;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.activeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.expDate {
+  font-size: 9px;
+  color: #fecaca;
+  margin-top: 0.125rem;
+  font-family: var(--font-mono);
+}
+
+.studentRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatarImg {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  border: 2px solid #fcd34d;
+  box-shadow: var(--shadow-md);
+  background-color: #262626;
+}
+
+.awardBadge {
+  position: absolute;
+  bottom: -0.375rem;
+  right: -0.375rem;
+  background-color: #fbbf24;
+  color: #450a0a;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-xs);
+}
+
+.studentInfo {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.studentName {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.studentId {
+  color: #fde68a;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.studentDept {
+  color: #fee2e2;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.125rem;
+}
+
+.wingTag {
+  margin-top: 0.375rem;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fde68a;
+  border: 1px solid rgba(252, 211, 77, 0.3);
+}
+
+.orgBanner {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  margin-bottom: 0.75rem;
+}
+
+.orgLabel {
+  color: #fecaca;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.orgName {
+  font-weight: 600;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.qrStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(252, 165, 165, 0.2);
+  padding-top: 0.75rem;
+  font-size: 10px;
+  color: #fecaca;
+  font-family: var(--font-mono);
+}
+
+.serialLabel {
+  display: block;
+  font-size: 8px;
+  color: #fca5a5;
+  text-transform: uppercase;
+}
+
+.serialVal {
+  color: #fde68a;
+  font-weight: 700;
+}
+
+.qrBox {
+  background-color: #ffffff;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  color: #171717;
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer {
+  background-color: #fafafa;
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:global(.dark) .footer {
+  background-color: #12131C;
+  border-top-color: #262626;
+}
+
+.authNote {
+  font-size: 0.75rem;
+  color: #737373;
+}
+
+:global(.dark) .authNote {
+  color: #a3a3a3;
+}
+
+.footerBtns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.printBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #e5e5e5;
+  color: #262626;
+  cursor: pointer;
+}
+
+.printBtn:hover {
+  background-color: #d4d4d4;
+}
+
+:global(.dark) .printBtn {
+  background-color: #262626;
+  color: #e5e5e5;
+}
+
+:global(.dark) .printBtn:hover {
+  background-color: #404040;
+}
+
+.closeActionBtn {
+  padding: 0.375rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #D40000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.closeActionBtn:hover {
+  background-color: #991b1b;
+}

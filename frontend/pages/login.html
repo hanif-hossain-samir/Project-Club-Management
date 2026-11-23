@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controller Sign In | CUEC Portal</title>
+    <link rel="icon" type="image/jpeg" href="/city-university-logo.jpg" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="cuec-app-shell">
+    <main class="cuec-main-content" style="max-width: 480px; margin: 4rem auto; padding: 0 1.25rem;">
+      <section class="cuec-card" style="padding: 2rem;">
+        <h1 style="font-size: 1.5rem; font-weight: 800;">CUCC Controller Portal Sign In</h1>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--color-text-muted);">
+          Authenticate using your official City University institutional email.
+        </p>
+        <form action="/api/auth/login" method="POST" style="margin-top: 1.25rem; display: grid; gap: 1rem;">
+          <div>
+            <label for="login-email" style="display: block; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.35rem;">
+              Institutional Email
+            </label>
+            <input id="login-email" name="email" type="email" required class="cuec-input" placeholder="controller.tech@cityuniversity.edu" />
+          </div>
+          <button type="submit" class="cuec-btn cuec-btn-primary">Sign In</button>
+          <a href="/" class="cuec-btn cuec-btn-ghost" style="text-align: center;">Back to Live Portal</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+/* Shared UI Component Patterns across CUEC Portal */
+
+.cuec-container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .cuec-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.cuec-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #fee2e2;
+  color: #D40000;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dark .cuec-kicker-badge {
+  background-color: rgba(69, 10, 10, 0.7);
+  color: #fca5a5;
+}
+
+.cuec-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cuec-modal-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  position: relative;
+  animation: cuecZoomIn 0.2s ease-out;
+}
+
+.dark .cuec-modal-card {
+  background-color: #151620;
+  border-color: #382026;
+}
+
+.cuec-toast-success {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.75rem;
+  box-shadow: var(--shadow-xl);
+  animation: cuecBounce 1s infinite;
+}
+
+.cuec-toast-error {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.75rem;
+  box-shadow: var(--shadow-xl);
+}
+
+.cuec-input,
+.cuec-select,
+.cuec-textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d4d4d4;
+  background-color: #fafafa;
+  color: #171717;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dark .cuec-input,
+.dark .cuec-select,
+.dark .cuec-textarea {
+  border-color: #404040;
+  background-color: #11121A;
+  color: #ffffff;
+}
+
+.cuec-input:focus,
+.cuec-select:focus,
+.cuec-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #D40000;
+  border-color: #D40000;
+}
+
+.cuec-btn-primary {
+  background-color: #D40000;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cuec-btn-primary:hover {
+  background-color: #991b1b;
+}
+
+.cuec-btn-primary:active {
+  transform: scale(0.95);
+}
+
+.cuec-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
